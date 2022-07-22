@@ -1428,14 +1428,20 @@
 <p class="admonition-title">Warn</p>
 <p>If you lose you seed phrase and your withdrawal key, your funds will be lost forever!</p>
 </div>
-<p><strong>Mainnet</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Mainnet</label><label for="__tabbed_1_2">Prater</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Run the deposit tool and follow the instructions on screen</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>./deposit new-mnemonic --chain mainnet
 </code></pre></div>
-<p><strong>Prater</strong>
+</div>
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Run the deposit tool and follow the instructions on screen</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>./deposit new-mnemonic --chain prater
-</code></pre></div></p>
+</code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="make-the-deposit">Make the deposit</h2>
 <p>Once created, the keys are used to create a deposit transaction on the Ethereum execution chain. Follow the instructions at https://launchpad.ethereum.org/en/upload-deposit-data to upload the deposit data.</p>
 <div class="admonition warning">

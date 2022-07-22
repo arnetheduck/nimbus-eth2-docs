@@ -1372,27 +1372,39 @@
 </div>
 <p>Having followed the <a href="deposit.html">deposit</a> guide, you will have a <code>validator_keys</code> folder containing several <code>.json</code> files in the <code>nimbus-eth2</code> directory.</p>
 <p>We'll import the signing key of each validator to the <a href="data-dir.html">data directory</a> using the <code>deposits import</code> command:</p>
-<p><strong>Mainnet</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Mainnet</label><label for="__tabbed_1_2">Prater</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>build/nimbus_beacon_node deposits import --data-dir<span class="o">=</span>build/data/shared_mainnet_0
 </code></pre></div>
-<strong>Prater</strong>
+</div>
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>build/nimbus_beacon_node deposits import --data-dir<span class="o">=</span>build/data/shared_prater_0
-</code></pre></div></p>
+</code></pre></div>
+</div>
+</div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You'll be asked to enter the password you created to encrypt your keystore(s).</p>
 </div>
 <p>If your <code>validator_keys</code> folder is stored elsewhere, you can pass its location to the import command:</p>
-<p><strong>Mainnet</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Mainnet</label><label for="__tabbed_2_2">Prater</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>build/nimbus_beacon_node deposits import <span class="se">\</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  --data-dir<span class="o">=</span>build/data/shared_mainnet_0 <span class="se">\</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  /path/to/keys
-</code></pre></div></p>
-<p><strong>Prater</strong>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>build/nimbus_beacon_node deposits import <span class="se">\</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  --data-dir<span class="o">=</span>build/data/shared_prater_0 <span class="se">\</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  /path/to/keys
-</code></pre></div></p>
+</code></pre></div>
+</div>
+</div>
+</div>
 <p>Replacing <code>/path/to/keys</code> with the full pathname of where the <code>validator_keys</code> directory is found.</p>
 <p>On success, a message will be printed that your keys have been imported:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>NOT 2022-07-19 17:36:37.578+02:00 Keystore imported

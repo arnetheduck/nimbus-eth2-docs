@@ -1476,17 +1476,23 @@
 <p>Make sure to replace <code>http://localhost:5052</code> in the commands below with the appropriate endpoint of the trusted beacon node. <code>http://localhost:5052</code> is the default endpoint exposed by Nimbus, but this is not consistent across all clients.</p>
 <p>For example, if your trusted node is a <a href="https://docs.prylabs.network/docs/how-prysm-works/ethereum-public-api#performing-requests-against-a-local-prysm-node">Prysm node</a>, it exposes <code>127.0.0.1:3500</code> by default. Which means you would run the commands below with <code>--trusted-node-url=http://127.0.0.1:3500</code></p>
 </div>
-<p><strong>Mainnet</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Mainnet</label><label for="__tabbed_1_2">Prater</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>build/nimbus_beacon_node trustedNodeSync <span class="se">\</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  --network:mainnet <span class="se">\</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  --data-dir<span class="o">=</span>build/data/shared_mainnet_0 <span class="se">\</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  --trusted-node-url<span class="o">=</span>http://localhost:5052
 </code></pre></div>
-<p><strong>Prater (testnet)</strong></p>
+</div>
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>build/nimbus_beacon_node trustedNodeSync --network:prater <span class="se">\</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a> --data-dir<span class="o">=</span>build/data/shared_prater_0  <span class="se">\</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a> --trusted-node-url<span class="o">=</span>http://localhost:5052
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>--data-dir<span class="o">=</span>build/data/shared_prater_0  <span class="se">\</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>--trusted-node-url<span class="o">=</span>http://localhost:5052
 </code></pre></div>
+</div>
+</div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Because trusted node sync by default copies all blocks via REST, you may hit API limits if you are using a third-party provider. If this happens to you, you may need to use the <code>--backfill</code> option to <a href="trusted-node-sync.html#delay-block-history-backfill">delay the backfill of the block history</a>.</p>

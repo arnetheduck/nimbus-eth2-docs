@@ -1383,11 +1383,19 @@
 <p>Once your keys have been <a href="keys.html">imported</a>, it is time to restart the beacon node and start validating!</p>
 <h2 id="restart-the-node">(Re)start the node</h2>
 <p>Press <code>Ctrl-c</code> to stop the beacon node if it's running, then use the same command as before to run it again:</p>
-<p><strong>Mainnet</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Mainnet</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./run-mainnet-beacon-node.sh
 </code></pre></div>
-<p><strong>Prater</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> ./run-prater-beacon-node.sh
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Prater</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./run-prater-beacon-node.sh
 </code></pre></div>
 <h2 id="check-the-logs">Check the logs</h2>
 <p>Your beacon node will launch and connect your validator to the beacon chain network. To check that keys were imported correctly, look for <code>Local validator attached</code> in the logs:</p>

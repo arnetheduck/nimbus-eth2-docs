@@ -1497,20 +1497,28 @@
 <p>See the <a href="https://geth.ethereum.org/docs/install-and-build/installing-geth">Installing Geth</a> for instructions on installing Geth.</p>
 <h3 id="2-start-geth">2. Start Geth</h3>
 <p>Once you have geth installed, make sure to enable the JSON-RPC WebSocket interface when running geth:</p>
-<p><strong>Testnet</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>geth --goerli --ws
-</code></pre></div></p>
-<p><strong>Mainnet</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>geth --ws
-</code></pre></div></p>
-<blockquote>
-<p><strong>Note:</strong> The <code>--ws</code> flag is needed to enable the websocket RPC API. This allows Nimbus to query the eth1 chain using Web3 API calls.</p>
-</blockquote>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Mainnet</label><label for="__tabbed_1_2">Goerli</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>geth --ws
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>geth --goerli --ws
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>--ws</code> flag is needed to enable the websocket RPC API. This allows Nimbus to query the eth1 chain using Web3 API calls.</p>
+</div>
 <h3 id="3-leave-geth-running">3. Leave Geth running</h3>
 <p>Let it sync - Geth uses snap sync by default. It may take anywhere between a few hours and a couple of days.</p>
-<blockquote>
-<p><strong>N.B.</strong> It is safe to run Nimbus and start validating even if Geth hasn't fully synced yet</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is safe to run Nimbus and start validating even if Geth hasn't fully synced yet</p>
+</div>
 <p>You'll know Geth has finished syncing, when you start seeing logs that look like the following:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>INFO [05-29|01:16:05] Imported new chain segment               blocks=1 txs=3   mgas=0.065  elapsed=5.885ms   mgasps=11.038  number=3785445 hash=553d9e…fc4547
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>INFO [05-29|01:16:10] Imported new chain segment               blocks=1 txs=0   mgas=0.000  elapsed=5.447ms   mgasps=0.000   number=3785446 hash=5e3e7d…bd4afd
