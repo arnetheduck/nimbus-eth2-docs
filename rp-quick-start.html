@@ -1,0 +1,1572 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Rocket Pool: Introductory guide - The Nimbus book</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rocket-pool-introductory-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="The Nimbus book" class="md-header__button md-logo" aria-label="The Nimbus book" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Nimbus book
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Rocket Pool: Introductory guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="The Nimbus book" class="md-nav__button md-logo" aria-label="The Nimbus book" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    The Nimbus book
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Summary
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Summary" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Summary
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="philosophy.html" class="md-nav__link">
+        Design goals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hardware.html" class="md-nav__link">
+        System requirements (recommended)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="preparation.html" class="md-nav__link">
+        Mainnet checklist
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="merge.html" class="md-nav__link">
+        The merge
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Quickstart
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Quickstart" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Quickstart
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quick-start.html" class="md-nav__link">
+        Run the beacon node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="run-a-validator.html" class="md-nav__link">
+        Run a validator
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Downloads
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Downloads" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Downloads
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="binaries.html" class="md-nav__link">
+        Nimbus binaries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docker.html" class="md-nav__link">
+        Docker images
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          How-to (beacon node)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="How-to (beacon node)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          How-to (beacon node)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="install.html" class="md-nav__link">
+        Prepare your machine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="build.html" class="md-nav__link">
+        Build the beacon node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="start-syncing.html" class="md-nav__link">
+        Sync your node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="trusted-node-sync.html" class="md-nav__link">
+        Sync from a trusted node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="web3-backup.html" class="md-nav__link">
+        Add a backup web3 provider
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          How-to (validator)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="How-to (validator)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          How-to (validator)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deposit.html" class="md-nav__link">
+        Make a deposit for your validator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="keys.html" class="md-nav__link">
+        Import your validator keys into Nimbus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="connect-eth2.html" class="md-nav__link">
+        Start validating
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="graffiti.html" class="md-nav__link">
+        Graffiti
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="suggested-fee-recipient.html" class="md-nav__link">
+        Suggested Fee Recipient
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="keep-an-eye.html" class="md-nav__link">
+        Keep an eye on your validator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="voluntary-exit.html" class="md-nav__link">
+        Perform a voluntary exit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validator-monitor.html" class="md-nav__link">
+        Validator monitoring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="more-keys.html" class="md-nav__link">
+        Recover lost keys and generate new ones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="additional-validator.html" class="md-nav__link">
+        Add an additional validator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validator-client.html" class="md-nav__link">
+        Run a separate validator client
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          How-to (misc)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="How-to (misc)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          How-to (misc)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="keep-updated.html" class="md-nav__link">
+        Upgrade / downgrade Nimbus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="eth1.html" class="md-nav__link">
+        Run an execution client
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="goerli-eth.html" class="md-nav__link">
+        Obtain Goerli ETH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beacon-node-systemd.html" class="md-nav__link">
+        Set up a systemd service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="log-rotate.html" class="md-nav__link">
+        Log rotation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checksums.html" class="md-nav__link">
+        Verify the integrity of Nimbus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="database-backup.html" class="md-nav__link">
+        Back up your database
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="logging.html" class="md-nav__link">
+        Logging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="email-notifications.html" class="md-nav__link">
+        Email notifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="profits.html" class="md-nav__link">
+        Optimise for profitability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="health.html" class="md-nav__link">
+        Monitor the health of your node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="networking.html" class="md-nav__link">
+        Network setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="prater.html" class="md-nav__link">
+        Prater testnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="kiln.html" class="md-nav__link">
+        Run Kiln
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="metrics-pretty-pictures.html" class="md-nav__link">
+        Grafana and Prometheus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="infura-guide.html" class="md-nav__link">
+        Supplying your own Infura endpoint
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="migration.html" class="md-nav__link">
+        Migrate from another client
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pi-guide.html" class="md-nav__link">
+        Validate with a Raspberry Pi: Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="attestation-performance.html" class="md-nav__link">
+        Analyze attestation performance
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Security
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Security" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Security
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="security_issues.html" class="md-nav__link">
+        Security issues
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="audit.html" class="md-nav__link">
+        Security Audit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="distribution_internals.html" class="md-nav__link">
+        Binary distribution internals
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rest-api.html" class="md-nav__link">
+        REST API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="keymanager-api.html" class="md-nav__link">
+        Keymanager API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="options.html" class="md-nav__link">
+        Command line options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="data-dir.html" class="md-nav__link">
+        The data directory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="migration-options.html" class="md-nav__link">
+        Migration options (advanced)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="troubleshooting.html" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers.html" class="md-nav__link">
+        For Developers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contribute.html" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="resources.html" class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq.html" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api.html" class="md-nav__link">
+        JSON-RPC API
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-install-docker-compose" class="md-nav__link">
+    1. Install Docker + Compose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-install-smart-node-client" class="md-nav__link">
+    2. Install smart node client
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-install-smart-node-service" class="md-nav__link">
+    3. Install smart node service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-configure-smart-node-client" class="md-nav__link">
+    4. Configure smart node client
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-start-rocket-pool" class="md-nav__link">
+    5. Start Rocket Pool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-check-nimbus-is-running-correctly" class="md-nav__link">
+    6. Check Nimbus is running correctly
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-create-a-rocket-pool-wallet" class="md-nav__link">
+    7. Create a Rocket Pool wallet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-find-your-node-address" class="md-nav__link">
+    8. Find your node address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-request-goerli-eth" class="md-nav__link">
+    9. Request Goerli ETH
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-request-goerli-rpl" class="md-nav__link">
+    10. Request Goerli RPL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-register-your-node" class="md-nav__link">
+    11. Register your node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-make-a-deposit" class="md-nav__link">
+    12. Make a deposit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-resources-further-reading" class="md-nav__link">
+    Key resources / further reading
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="rocket-pool-introductory-guide">Rocket Pool: Introductory guide</h1>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We believe decentralised staking pools like <a href="https://twitter.com/Rocket_Pool?ref_src=twsrc%5Etfw">@Rocket_Pool</a> and <a href="https://twitter.com/DAppNode?ref_src=twsrc%5Etfw">@DAppNode</a> DAO are essential to ensuring <a href="https://twitter.com/ethereum?ref_src=twsrc%5Etfw">@ethereum</a>&#39;s future as an unbreakable and censorship-resistant system.<a href="https://t.co/FXQQICZsfL">https://t.co/FXQQICZsfL</a></p>&mdash; Nimbus (@ethnimbus) <a href="https://twitter.com/ethnimbus/status/1367841160081907717?ref_src=twsrc%5Etfw">March 5, 2021</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>This guide offers a bare-bones introduction to getting up and running with Nimbus and <a href="https://www.rocketpool.net/">Rocket Pool</a> -- a trustless staking pool which matches those who wish to stake some ETH with those who wish to operate a node.</p>
+<blockquote>
+<p><strong>Nota Bene:</strong> Rocket Pool is not only for node operators. Staking in Rocket Pool as a regular user is as easy as navigating to the <a href="https://beta.rocketpool.net/">Rocket Pool website</a>, entering an amount of ETH to stake, and clicking Start! When you stake, you will immediately receive an amount of rETH with equivalent value to the ETH you deposit. This allows anyone, no matter how technical or wealthy, to help contribute to the decentralisation of the network.</p>
+</blockquote>
+<p>It assumes you are familiar with the basics of how Rocket Pool works. If that's not the case, we recommend reading through the following resources first:
+- Our <a href="https://our.status.im/rocket-pool-integration/">introductory post</a>
+- Rocket Pool explainer series: <a href="https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd">part 1</a>
+- Rocket Pool explainer series: <a href="https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-2-e0d346911fe1">part 2</a>
+- <a href="https://medium.com/rocket-pool/rocket-pool-3-0-beta-finale-fb35c4f8e003">Beta Finale</a> announcement</p>
+<p>If you're a Raspberry Pi user, we highly recommend <a href="https://github.com/jclapis/rp-pi-guide/blob/main/Overview.md">this wonderful and complementary resouce</a> by community member Joe Clapis.</p>
+<blockquote>
+<p><strong>Note:</strong> Rocket Pool is currently running their <a href="https://medium.com/rocket-pool/rocket-pool-3-0-beta-finale-fb35c4f8e003">Beta Finale</a> on Pyrmont testnet, so this is the perfect time to get up to speed and play around with their stack.</p>
+</blockquote>
+<h2 id="1-install-docker-compose">1. Install Docker + Compose</h2>
+<blockquote>
+<p>If you're using  Ubuntu, Debian, CentOS or Fedora, please skip this step.</p>
+</blockquote>
+<p>To install Docker and Compose follow the instructions <a href="https://docs.docker.com/get-docker/">here</a> and <a href="https://docs.docker.com/compose/install/">here</a>.</p>
+<blockquote>
+<p>Note that Docker Desktop for Mac and Windows already include Compose, which means that if you're using a Mac or Windows device you can ignore the second link.</p>
+</blockquote>
+<h2 id="2-install-smart-node-client">2. Install smart node client</h2>
+<blockquote>
+<p><strong>Background:</strong> The Rocket Pool smart node software stack provides all of the necessary infrastructure for running a node in the Rocket Pool network: it contains a smart node client, which provides a command-line interface for managing a smart node either locally or remotely (over SSH) and a smart node service; which provides an API for client communication and performs background node tasks (such as validator duties).</p>
+</blockquote>
+<p>You can install the smart node client with either <code>curl</code> or <code>wget</code>.</p>
+<p>To see which tool you have available, run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl --version
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>wget --version
+</code></pre></div>
+<p>Once you know whether you have <code>curl</code> or <code>wget</code> available, you can find the relevant command for your operating system <a href="https://rocket-pool.readthedocs.io/en/latest/smart-node/getting-started.html#installation">here</a>.</p>
+<blockquote>
+<p>For example, if you're running MacOS with <code>curl</code> installed, you should run:</p>
+<p><code>curl -L https://github.com/rocket-pool/smartnode-install/releases/latest/download/rocketpool-cli-darwin-amd64 -o /usr/local/bin/rocketpool &amp;&amp; chmod +x /usr/local/bin/rocketpool</code></p>
+</blockquote>
+<h2 id="3-install-smart-node-service">3. Install smart node service</h2>
+<p>To install the smart node service, run:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>rocketpool service install
+</code></pre></div></p>
+<blockquote>
+<p><strong>Note:</strong> If you’re using Ubuntu, Debian, CentOS or Fedora, the above will automatically install docker engine and docker-compose on your system. If automatic dependency installation is not supported on your platform (this is the case for MacOS for example), run <code>rocketpool service install -d</code> instead.</p>
+</blockquote>
+<h2 id="4-configure-smart-node-client">4. Configure smart node client</h2>
+<p>Now you're ready to configure the smart node client:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>rocketpool service config
+</code></pre></div></p>
+<p>You’ll be prompted to select an eth1 and eth2 client to run. If you like, you can use Infura instead of running an eth1 client.</p>
+<p><em>The default is to select a random client for you, so make sure you select Nimbus!</em></p>
+<h2 id="5-start-rocket-pool">5. Start Rocket Pool</h2>
+<p>To start Rocket Pool, open a new shell session and run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>rocketpool service start
+</code></pre></div>
+<p>You should see the following:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Starting rocketpool_eth1 ... done
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Starting rocketpool_api  ... done
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Starting rocketpool_eth2 ... done
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Starting rocketpool_watchtower ... done
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Starting rocketpool_node       ... done
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>Starting rocketpool_validator  ... done
+</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> Docker will make sure that Rocket Pool keeps running, even if Nimbus crashes or you restart your computer.</p>
+</blockquote>
+<h2 id="6-check-nimbus-is-running-correctly">6. Check Nimbus is running correctly</h2>
+<p>To ensure Nimbus is running correctly, run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>rocketpool service logs eth2
+</code></pre></div>
+<p>Nimbus will print lines that look like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>eth2_1        | INF 2021-02-21 06:35:43.302+00:00 Slot start                                 topics=&quot;beacnde&quot; tid=1 file=nimbus_beacon_node.nim:940 lastSlot=682377 scheduledSlot=682378 delay=302ms641us581ns peers=47 head=f752f69a:745 headEpoch=23 finalized=2717f624:672 finalizedEpoch=21 sync=&quot;PPUPPPDDDD:10:2.0208:1.5333:01d20h29m (736)&quot;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>eth2_1        | INF 2021-02-21 06:35:43.568+00:00 Slot end
+</code></pre></div>
+<p>The time towards the end (<code>01d20h29m</code>) tells you how long Nimbus thinks it will be until you're fully synced.</p>
+<h2 id="7-create-a-rocket-pool-wallet">7. Create a Rocket Pool wallet</h2>
+<p>Now that Nimbus is syncing, you're ready to create a Rocket Pool wallet to create and hold your validator keys:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>rocketpool wallet init
+</code></pre></div></p>
+<h2 id="8-find-your-node-address">8. Find your node address</h2>
+<p>You'll need to find your node address in order to be able to request Goerli ETH:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>rocketpool node status
+</code></pre></div></p>
+<h2 id="9-request-goerli-eth">9. Request Goerli ETH</h2>
+<p>Request <strong>35</strong> Goerli ETH from <a href="https://faucet.goerli.mudit.blog/">the faucet</a> to the address you found in the previous step.</p>
+<blockquote>
+<p><strong>Note:</strong> you'll need slightly more than 32 ETH since you'll also need to interact with the Rocket Pool smart contracts to request RPL.</p>
+</blockquote>
+<h2 id="10-request-goerli-rpl">10. Request Goerli RPL</h2>
+<p>You'll also need some RPL. To request RPL directly from the Rocket Pool faucet, run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>rocketpool faucet withdraw-rpl
+</code></pre></div>
+<h2 id="11-register-your-node">11. Register your node</h2>
+<p>Now you're finally ready to register your node with Rocket Pool:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>rocketpool node register
+</code></pre></div>
+<h2 id="12-make-a-deposit">12. Make a deposit</h2>
+<p>The final step is to deposit 32 ETH to initialise your validator (don't worry you'll get half of it back):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>rocketpool node deposit
+</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> You’ll see a prompt that will ask you to select the amount of ETH you wish to deposit. Select 32 ETH to ensure you can start staking ASAP. At some point (shouldn't take more than 24 hours) you'll be assigned an additional 16 ETH to manage from Rocket Pool stakers: at this stage you'll be able to ask for a 16 ETH refund using <code>rocketpool minipool refund</code>.</p>
+</blockquote>
+<p>That’s it! You’re officially part of the Rocket Pool network!</p>
+<blockquote>
+<p><strong>Tip:</strong> Once Nimbus is synced, you'll be able to check on the status of your minipool by running:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>rocketpool minipool status
+</code></pre></div></p>
+</blockquote>
+<h2 id="key-resources-further-reading">Key resources / further reading</h2>
+<ul>
+<li>
+<p>Node Operator’s Guide: <a href="https://medium.com/rocket-pool/rocket-pool-v2-5-beta-node-operators-guide-77859891766b">https://medium.com/rocket-pool/rocket-pool-v2-5-beta-node-operators-guide-77859891766b</a></p>
+</li>
+<li>
+<p>Smart node docs (for all things documentation related): <a href="https://rocket-pool.readthedocs.io/en/latest/smart-node/introduction.html">https://rocket-pool.readthedocs.io/en/latest/smart-node/introduction.html</a></p>
+</li>
+<li>
+<p>Joe Clapis' guide (Excellent resource for Pi users): <a href="https://github.com/jclapis/rp-pi-guide/blob/main/Overview.md">https://github.com/jclapis/rp-pi-guide/blob/main/Overview.md</a></p>
+</li>
+<li>
+<p>Rocket Pool's <a href="https://discord.gg/a5zVQd66gr">discord</a></p>
+</li>
+</ul>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
