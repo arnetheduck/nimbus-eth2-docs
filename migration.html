@@ -177,7 +177,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="philosophy.html" class="md-tabs__link">
+      <a href="index.html" class="md-tabs__link">
         About
       </a>
     </li>
@@ -187,21 +187,7 @@
         
   
   
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="quick-start.html" class="md-tabs__link">
-        Quickstart
-      </a>
-    </li>
-  
-
-      
-        
-  
+    
   
 
 
@@ -209,8 +195,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="binaries.html" class="md-tabs__link">
-        Downloads
+      <a href="quick-start.html" class="md-tabs__link md-tabs__link--active">
+        Getting started
       </a>
     </li>
   
@@ -242,24 +228,6 @@
         
   
   
-    
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="migration.html" class="md-tabs__link md-tabs__link--active">
-        Guides
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
 
 
   
@@ -282,8 +250,24 @@
   
   
     <li class="md-tabs__item">
-      <a href="options.html" class="md-tabs__link">
+      <a href="hardware.html" class="md-tabs__link">
         Reference
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="binaries.html" class="md-tabs__link">
+        Downloads
       </a>
     </li>
   
@@ -369,8 +353,8 @@
   
   
     <li class="md-nav__item">
-      <a href="philosophy.html" class="md-nav__link">
-        Design goals
+      <a href="index.html" class="md-nav__link">
+        The Nimbus Guide
       </a>
     </li>
   
@@ -383,8 +367,22 @@
   
   
     <li class="md-nav__item">
-      <a href="hardware.html" class="md-nav__link">
-        System requirements
+      <a href="merge.html" class="md-nav__link">
+        The Merge
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="philosophy.html" class="md-nav__link">
+        Design goals
       </a>
     </li>
   
@@ -405,20 +403,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="merge.html" class="md-nav__link">
-        The merge
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -431,25 +415,27 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
       
         <label class="md-nav__link" for="__nav_2">
-          Quickstart
+          Getting started
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Quickstart" data-md-level="1">
+      <nav class="md-nav" aria-label="Getting started" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Quickstart
+          Getting started
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -481,6 +467,213 @@
 
             
           
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Migrate from another client
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="migration.html" class="md-nav__link md-nav__link--active">
+        Migrate from another client
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sync-the-nimbus-beacon-node" class="md-nav__link">
+    1. Sync the Nimbus beacon node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-stop-your-existing-client-and-export-your-slashing-protection-history" class="md-nav__link">
+    Step 2 - Stop your existing client and export your slashing protection history
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2 - Stop your existing client and export your slashing protection history">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-disable-the-prysm-validator-client" class="md-nav__link">
+    1. Disable the Prysm validator client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-export-slashing-protection-history" class="md-nav__link">
+    2. Export slashing protection history
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-disable-the-lighthouse-validator-client" class="md-nav__link">
+    1. Disable the Lighthouse validator client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-export-slashing-protection-history_1" class="md-nav__link">
+    2. Export slashing protection history
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-disable-teku" class="md-nav__link">
+    1. Disable Teku
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-export-slashing-protection-history_2" class="md-nav__link">
+    2. Export slashing protection history
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-disable-the-nimbus-validator-client" class="md-nav__link">
+    1. Disable the Nimbus validator client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-export-slashing-protection-history_3" class="md-nav__link">
+    2. Export slashing protection history
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-import-your-validator-keys-into-nimbus" class="md-nav__link">
+    3. Import your validator key(s) into Nimbus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-import-your-slashing-protection-history" class="md-nav__link">
+    4. Import your slashing protection history
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-start-the-nimbus-validator" class="md-nav__link">
+    5. Start the Nimbus validator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-thoughts" class="md-nav__link">
+    Final thoughts
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="metrics-pretty-pictures.html" class="md-nav__link">
+        Grafana and Prometheus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pi-guide.html" class="md-nav__link">
+        Running on a Raspberry Pi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="el-light-client.html" class="md-nav__link">
+        Run the light client
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -504,88 +697,12 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          Downloads
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Downloads" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Downloads
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="binaries.html" class="md-nav__link">
-        Binaries
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="docker.html" class="md-nav__link">
-        Docker images
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="checksums.html" class="md-nav__link">
-        Checksums
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4">
           How-to
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="How-to" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           How-to
         </label>
@@ -600,18 +717,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_4_1">
+        <label class="md-nav__link" for="__nav_3_1">
           Beacon node
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Beacon node" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_1">
+        <label class="md-nav__title" for="__nav_3_1">
           <span class="md-nav__icon md-icon"></span>
           Beacon node
         </label>
@@ -679,20 +796,6 @@
   
   
     <li class="md-nav__item">
-      <a href="networking.html" class="md-nav__link">
-        Networking options
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="web3-backup.html" class="md-nav__link">
         Backup web3 provider
       </a>
@@ -717,18 +820,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_4_2">
+        <label class="md-nav__link" for="__nav_3_2">
           Validator
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Validator" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_2">
+        <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           Validator
         </label>
@@ -783,7 +886,7 @@
   
     <li class="md-nav__item">
       <a href="graffiti.html" class="md-nav__link">
-        Graffiti
+        Set up Graffiti
       </a>
     </li>
   
@@ -797,7 +900,7 @@
   
     <li class="md-nav__item">
       <a href="suggested-fee-recipient.html" class="md-nav__link">
-        Suggested Fee Recipient
+        Set up suggested fee recipient
       </a>
     </li>
   
@@ -826,20 +929,6 @@
     <li class="md-nav__item">
       <a href="voluntary-exit.html" class="md-nav__link">
         Perform a voluntary exit
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="validator-monitor.html" class="md-nav__link">
-        Validator monitoring
       </a>
     </li>
   
@@ -904,18 +993,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_4_3">
+        <label class="md-nav__link" for="__nav_3_3">
           General
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="General" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_3">
+        <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           General
         </label>
@@ -983,22 +1072,8 @@
   
   
     <li class="md-nav__item">
-      <a href="logging.html" class="md-nav__link">
-        Logging options
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="log-rotate.html" class="md-nav__link">
-        Log rotation
+        Set up log rotation
       </a>
     </li>
   
@@ -1075,266 +1150,8 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="kiln.html" class="md-nav__link">
-        Run Kiln
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5">
-          Guides
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Guides" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Guides
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Migrate from another client
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="migration.html" class="md-nav__link md-nav__link--active">
-        Migrate from another client
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-sync-the-nimbus-beacon-node" class="md-nav__link">
-    Step 1 - Sync the Nimbus beacon node
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-stop-your-existing-client-and-export-your-slashing-protection-history" class="md-nav__link">
-    Step 2 - Stop your existing client and export your slashing protection history
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 2 - Stop your existing client and export your slashing protection history">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-disable-the-prysm-validator-client" class="md-nav__link">
-    1. Disable the Prysm validator client
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-export-slashing-protection-history" class="md-nav__link">
-    2. Export slashing protection history
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1-disable-the-lighthouse-validator-client" class="md-nav__link">
-    1. Disable the Lighthouse validator client
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-export-slashing-protection-history_1" class="md-nav__link">
-    2. Export slashing protection history
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1-disable-teku" class="md-nav__link">
-    1. Disable Teku
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-export-slashing-protection-history_2" class="md-nav__link">
-    2. Export slashing protection history
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1-disable-the-nimbus-validator-client" class="md-nav__link">
-    1. Disable the Nimbus validator client
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-export-slashing-protection-history_3" class="md-nav__link">
-    2. Export slashing protection history
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-import-your-validator-keys-into-nimbus" class="md-nav__link">
-    Step 3 - Import your validator key(s) into Nimbus
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-import-your-slashing-protection-history" class="md-nav__link">
-    Step 4 - Import your slashing protection history
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-start-the-nimbus-validator" class="md-nav__link">
-    Step 5 - Start the Nimbus validator
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#final-thoughts" class="md-nav__link">
-    Final thoughts
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="metrics-pretty-pictures.html" class="md-nav__link">
-        Grafana and Prometheus
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="pi-guide.html" class="md-nav__link">
-        Validate with a Raspberry Pi: Guide
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="attestation-performance.html" class="md-nav__link">
-        Analyze attestation performance
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="infura-guide.html" class="md-nav__link">
-        Setting up an Infura account
-      </a>
     </li>
   
 
@@ -1357,18 +1174,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_4">
           Security
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Security" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Security
         </label>
@@ -1433,18 +1250,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_5">
           Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Reference" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Reference
         </label>
@@ -1456,8 +1273,78 @@
   
   
     <li class="md-nav__item">
+      <a href="hardware.html" class="md-nav__link">
+        System requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="options.html" class="md-nav__link">
         Command line options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="networking.html" class="md-nav__link">
+        Networking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="logging.html" class="md-nav__link">
+        Logging options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validator-monitor.html" class="md-nav__link">
+        Validator monitoring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="attestation-performance.html" class="md-nav__link">
+        Attestation performance analysis
       </a>
     </li>
   
@@ -1526,6 +1413,20 @@
   
   
     <li class="md-nav__item">
+      <a href="light-client-data.html" class="md-nav__link">
+        Light client data (advanced)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="troubleshooting.html" class="md-nav__link">
         Troubleshooting
       </a>
@@ -1542,20 +1443,6 @@
     <li class="md-nav__item">
       <a href="developers.html" class="md-nav__link">
         For Developers
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="contribute.html" class="md-nav__link">
-        Updating this book
       </a>
     </li>
   
@@ -1604,6 +1491,96 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contribute.html" class="md-nav__link">
+        Updating this guide
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Downloads
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Downloads" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Downloads
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="binaries.html" class="md-nav__link">
+        Binaries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docker.html" class="md-nav__link">
+        Docker images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="checksums.html" class="md-nav__link">
+        Checksums
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1639,13 +1616,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1-sync-the-nimbus-beacon-node" class="md-nav__link">
-    Step 1 - Sync the Nimbus beacon node
+  <a href="#steps" class="md-nav__link">
+    Steps
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sync-the-nimbus-beacon-node" class="md-nav__link">
+    1. Sync the Nimbus beacon node
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#step-2-stop-your-existing-client-and-export-your-slashing-protection-history" class="md-nav__link">
     Step 2 - Stop your existing client and export your slashing protection history
   </a>
@@ -1713,25 +1698,30 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-import-your-validator-keys-into-nimbus" class="md-nav__link">
-    Step 3 - Import your validator key(s) into Nimbus
+        
+          <li class="md-nav__item">
+  <a href="#3-import-your-validator-keys-into-nimbus" class="md-nav__link">
+    3. Import your validator key(s) into Nimbus
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-import-your-slashing-protection-history" class="md-nav__link">
-    Step 4 - Import your slashing protection history
+        
+          <li class="md-nav__item">
+  <a href="#4-import-your-slashing-protection-history" class="md-nav__link">
+    4. Import your slashing protection history
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-start-the-nimbus-validator" class="md-nav__link">
-    Step 5 - Start the Nimbus validator
+        
+          <li class="md-nav__item">
+  <a href="#5-start-the-nimbus-validator" class="md-nav__link">
+    5. Start the Nimbus validator
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1762,26 +1752,28 @@
 
 <h1 id="migrate-from-another-client">Migrate from another client</h1>
 <p>This guide will take you through the basics of how to migrate to Nimbus from another client. <em>See <a href="migration-options.html">here</a> for advanced options</em>.</p>
-<p>The main pain point involves the exporting and importing of the <a href="https://eips.ethereum.org/EIPS/eip-3076">slashing protection database</a>, since each client takes a slightly different approach here.</p>
+<p><strong>Please take your time to get this right.</strong> Don't hesitate to reach out to us in the <code>#helpdesk</code> channel of <a href="https://discord.gg/j3nYBUeEad">our discord</a> if you come across a stumbling block. We are more than happy to help guide you through the migration process. Given what's at stake, there is no such thing as a stupid question.</p>
+<div class="admonition info">
+<p>Unlike other clients, Nimbus does not require a separate validator client - instead, validators are by default run inside the beacon node process.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>The most important takeaway is that you ensure that two clients will never validate with the same keys at the same time.</strong> In other words, you must ensure that your original client is stopped, and no longer validating, before importing your keys into Nimbus.</p>
 </div>
-<blockquote>
-<p><strong>Please take your time to get this right.</strong> Don't hesitate to reach out to us in the <code>#helpdesk</code> channel of <a href="https://discord.gg/j3nYBUeEad">our discord</a> if you come across a stumbling block. We are more than happy to help guide you through the migration process. Given what's at stake, there is no such thing as a stupid question.</p>
-</blockquote>
-<h2 id="step-1-sync-the-nimbus-beacon-node">Step 1 - Sync the Nimbus beacon node</h2>
+<h2 id="steps">Steps</h2>
+<h3 id="1-sync-the-nimbus-beacon-node">1. Sync the Nimbus beacon node</h3>
 <p>No matter which client you are migrating over from, the first step is to sync the Nimbus beacon node.</p>
-<p>The easiest way to do this is to follow the <a href="quick-start.html">beacon node quick start guide</a>.  Syncing the beacon node might take up to 30 hours depending on your hardware - you should keep validating using your current setup until it completes.</p>
+<p>The easiest way to do this is to follow the <a href="quick-start.html">beacon node quick start guide</a>.</p>
 <p>Once your Nimbus beacon node has synced and you're satisfied that it's working, move to <strong>Step 2</strong>.</p>
-<blockquote>
-<p><strong>Tip:</strong> See here for how to <a href="keep-an-eye.html#keep-track-of-your-syncing-progress">keep track of your syncing progress</a>.</p>
-<p>Alternatively, If you run the Nimbus beacon node with the <code>--rest</code> option enabled (e.g. <code>./run-mainnet-beacon-node.sh --rest</code>), you can obtain your node's syncing status by running:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl -X GET http://localhost:5052/eth/v1/node/syncing
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can keep track of your <a href="keep-an-eye.html#keep-track-of-your-syncing-progress">syncing progress</a> with the following command:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl -X GET http://localhost:5052/eth/v1/node/syncing
 </code></pre></div>
-<p>Look for an <code>"is_syncing":false</code> in the response to confirm that your node has synced.</p>
-</blockquote>
-<h2 id="step-2-stop-your-existing-client-and-export-your-slashing-protection-history">Step 2 - Stop your existing client and export your slashing protection history</h2>
+Look for an <code>"is_syncing":false</code> in the response to confirm that your node has synced.</p>
+</div>
+<h3 id="step-2-stop-your-existing-client-and-export-your-slashing-protection-history">Step 2 - Stop your existing client and export your slashing protection history</h3>
+<p>As part of the migration process, you need to stop your existing client and export its <a href="https://eips.ethereum.org/EIPS/eip-3076">slashing protection database</a>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Prysm</label><label for="__tabbed_1_2">Lighthouse</label><label for="__tabbed_1_3">Teku</label><label for="__tabbed_1_4">Nimbus</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1866,18 +1858,19 @@
 </div>
 </div>
 </div>
-<h2 id="step-3-import-your-validator-keys-into-nimbus">Step 3 - Import your validator key(s) into Nimbus</h2>
+<h3 id="3-import-your-validator-keys-into-nimbus">3. Import your validator key(s) into Nimbus</h3>
 <p>To import you validator key(s), follow the instructions <a href="keys.html">outlined here</a>.</p>
-<blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>To check that your key(s) has been successfully imported, look for a file named after your public key in <code>build/data/shared_mainet_0/secrets/</code>.</p>
 <p>If you run into an error at this stage, it's probably because the wrong permissions have been set on either a folder or file. See <a href="faq.html#folder-permissions">here</a> for how to fix this.</p>
-</blockquote>
-<h2 id="step-4-import-your-slashing-protection-history">Step 4 - Import your slashing protection history</h2>
+</div>
+<h3 id="4-import-your-slashing-protection-history">4. Import your slashing protection history</h3>
 <p>To import the slashing protection history you exported in <strong>step 2</strong>, from the <code>nimbus-eth2</code> directory run:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>build/nimbus_beacon_node slashingdb import path/to/export_dir/slashing-protection.json
 </code></pre></div>
 <p>Replacing <code>/path/to/export_dir</code> with the file/directory you specified when you exported your slashing protection history.</p>
-<h2 id="step-5-start-the-nimbus-validator">Step 5 - Start the Nimbus validator</h2>
+<h3 id="5-start-the-nimbus-validator">5. Start the Nimbus validator</h3>
 <p>Follow the instructions <a href="connect-eth2.html">here</a> to start your validator using our pre-built <a href="binaries.html">binaries</a>.</p>
 <p>If you prefer to use Docker, see <a href="docker.html">here</a></p>
 <p>For a quick guide on how to set up a systemd service, see <a href="beacon-node-systemd.html">here</a></p>
@@ -1907,7 +1900,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="kiln.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Run Kiln" rel="prev">
+        <a href="run-a-validator.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Run a validator" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1916,7 +1909,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Run Kiln
+              Run a validator
             </div>
           </div>
         </a>
